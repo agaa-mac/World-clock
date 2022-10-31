@@ -12,6 +12,8 @@
       href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=PT+Mono&family=Poppins:wght@500&family=Roboto:ital,wght@1,100&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.38/moment-timezone-with-data-1970-2030.min.js"></script>
   </head>
   <body>
     <div class="conteiner">
@@ -22,26 +24,26 @@
         <option value="">Paris</option>
         <option value="">Toronto</option>
       </select>
-      <div class="displayCity">
+      <div class="displayCity" id="firstCity">
         <div>
-          <h2>London</h2>
-          <div class="date">November 20th, 2022</div>
+          <h2>Sydney</h2>
+          <div class="date"></div>
         </div>
-        <div class="time">10:20</div>
+        <div class="time"></div>
       </div>
-      <div class="displayCity">
+      <div class="displayCity" id="secondCity">
         <div>
-          <h2>London</h2>
-          <div class="date">November 20th, 2022</div>
+          <h2>Paris</h2>
+          <div class="date"></div>
         </div>
-        <div class="time">10:20</div>
+        <div class="time"></div>
       </div>
-      <div class="displayCity thirdCity">
+      <div class="displayCity thirdCity" id="thirdCity">
         <div>
-          <h2>London</h2>
-          <div class="date">November 20th, 2022</div>
+          <h2>Toronto</h2>
+          <div class="date"></div>
         </div>
-        <div class="time">10:20</div>
+        <div class="time"></div>
       </div>
     </div>
     <footer>
