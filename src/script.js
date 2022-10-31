@@ -30,3 +30,26 @@ function updateTime() {
   thirdCityTime.innerHTML = torontoTime;
 }
 setInterval(updateTime, 1000);
+
+function updateCity(event) {
+  let cityTimeZone = event.target.value;
+  let cityTime = moment().tz(cityTimeZone);
+  let cityName = cityTimeZone.replace("_", "").split("/")[1];
+  let citiesElement = document.querySelector("#cities");
+  citiesElement.innerHTML = `
+  
+<div class="displayCity">
+          <div>
+            <h2>${cityName}</h2>
+            <div class="date">${cityTime.format("MMMM Do, YYYY")}</div>
+          </div>
+          <div class="time">${cityTime.format(
+            "HH:mm:ss [<small>]a[</small>]"
+          )}</div>
+        </div>
+
+  `;
+}
+
+let citiesSelectElement = document.querySelector("#city");
+citiesSelectElement.addEventListener("change", updateCity);
